@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Tic-Tac-Toe";
+}
+
+<div id="menuCard" class="card">
+    <div class="card-header">
+        <div class="input-group input-group-sm ">
+            @Html.TextBox("roomNameSearch", null, new { @class = "form-control", placeholder = "Room name...", autocomplete = "off" })
+            @Html.TextBox("tagsSearch", null, new { @class = "form-control col-md-3", placeholder = "Tags..." })
+            <div class="input-group-append">
+                <button id="roomCreateButton" class="btn btn-primary">
+                    <span class="fa fa-plus"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul id="roomsList" class="list-group">
+        </ul>
+    </div>
+</div>
+
+
+
+<div id="playingCard" class="card d-none">
+    <input id="roomName" type="hidden" />
+    <div class="card-header">
+        <div id="title" class="input-group input-group-sm">
+        </div>
+    </div>
+    <div class="card-body">
+        <div id="waitingPanel">
+            <div class="row d-flex justify-content-md-center">
+                Waiting for opponent
+            </div>
+            <div class="row d-flex justify-content-md-center">
+                <div class="spinner-grow text-muted"></div>
+                <div class="spinner-grow text-primary"></div>
+                <div class="spinner-grow text-success"></div>
+                <div class="spinner-grow text-info"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-danger"></div>
+                <div class="spinner-grow text-secondary"></div>
+                <div class="spinner-grow text-dark"></div>
+            </div>
+        </div>
+        <div id="gameField" class="container d-none">
+            <div class="row d-flex justify-content-md-center">
+                <span id="block0" class="border border-left-0 border-top-0 d-flex justify-content-md-center fa">
+
+                </span>
+                <span id="block1" class="border border-top-0 d-flex justify-content-md-center fa">
+                </span>
+                <span id="block2" class="border border-right-0 border-top-0 d-flex justify-content-md-center fa"></span>
+            </div>
+            <div class="row d-flex justify-content-md-center">
+                <span id="block3" class="border border-left-0 d-flex justify-content-md-center fa"></span>
+                <span id="block4" class="border d-flex justify-content-md-center fa"></span>
+                <span id="block5" class="border border-right-0 d-flex justify-content-md-center fa"></span>
+            </div>
+            <div class="row d-flex justify-content-md-center">
+                <span id="block6" class="border border-left-0 border-bottom-0 d-flex justify-content-md-center fa"></span>
+                <span id="block7" class="border border-bottom-0 d-flex justify-content-md-center fa"></span>
+                <span id="block8" class="border border-right-0 border-bottom-0 d-flex justify-content-md-center fa"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
